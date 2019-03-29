@@ -1,3 +1,40 @@
+header{
+      
+      display:flex;
+      height:100px;
+      padding:0 20%;
+      border-bottom:2px dashed #C0C0C0;
+
+      @media @mobile{
+
+        
+            margin-top: 20px;
+            justify-content: center;
+            flex-direction:column;
+            padding:0px;
+          }
+  
+      h1{
+          
+          width:40%;
+          margin-right: 11%;
+          display:flex;
+          align-items: center;
+          font-size:35px;
+          
+          @media @mobile{
+                  margin:0px;
+                  width:100%;
+                  justify-content: center;
+                  font-size:30px;
+              }
+      }
+
+      // @import "navigation";
+    }
+
+
+
 .home {
 
   .content-section {
@@ -6,22 +43,40 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile{
+      
+        flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width:100%;
+        padding-right:0%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width:100%;
+        padding-left:0%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile{
+          width:100%;
+        }
       }
     }
   }
+
 
   .inverse-content {
     padding-bottom: 30px;
@@ -30,6 +85,11 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        
+          order:-1;
+        }
     }
 
     .img-content {
@@ -38,14 +98,22 @@
     }
   }
 
+
+
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile{
+      
+        width:100%;
+      }
 
     img {
       border-radius: 10px;
     }
   }
+
 
   .content-pick {
 
@@ -55,24 +123,32 @@
     justify-content: space-between;
     height:330px;
 
-    .destination {
-      // border:2px solid red;
+    @media @mobile{
+      
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        height:730px;
+      }
+
+      .destination{
       width: 30%;
       margin-bottom: 30px;
 
-      .btn{
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        margin: 0 7%;
-        height: 45px;
-        align-items: center;
-        font-size: 18px;
-        border-radius: 10px;
-        // background: green;
-        color: white;
-        background-color:@button-bg;
+      @media @mobile {
+        width:100%;
       }
+
+
+      .btn{
+
+        .custom-button();
+        
+      }
+
+
     }
   }
+
+ 
 }// home
